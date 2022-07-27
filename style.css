@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+     --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+
+}
+
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--Paleblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    min-width: 400px;
+    max-width: 400px;
+    text-align: center;
+    border:none;
+    border-radius:1rem;
+    background-color:white;
+    margin: 1rem;
+}
+.card_bac{
+    width: 400px;
+    height: 20%;
+    margin-bottom: 2rem;
+}
+.container h1{
+    font-weight: 900;
+    /* font-size: 18px; */
+    margin-bottom: 1rem;
+}
+.container p{
+    font-size: 16px;
+    font-weight: 500;  
+    line-height: 2rem; 
+    margin-bottom: 1rem;
+}
+.desk_bac{
+    display: none;
+}
+.price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:80%;
+    margin: 0px auto;
+    background-color: var(--Verypaleblue);
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    transition: 1s;
+}
+
+.price img{
+    width: 4rem;
+}
+.price h1{
+    margin-top: 1rem;
+    font-size: 19px;
+    font-weight: 900;
+}
+.price h1 span{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--Desaturatedblue);
+    margin: 0;
+}
+.price a{
+    color: var(--Brightblue);
+    font-weight: 900;
+}
+.btn{
+    width: 80%;
+    margin: 0pc auto;
+    text-align: center;
+    background-color: var(--Brightblue);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+}
+.btn:hover{
+    background-color:hsl(245, 75%, 52%,50%);
+    color:black;
+}
+.btn p{
+    color: var(--Paleblue);
+    font-weight: 900;
+    margin: 0pc auto;
+}
+.container .cancel p{
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--Brightblue);
+}
+.attribution{
+    position: relative;
+    top: 50%;
+    display: inline;
+    min-width:max-content;
+}
+@media (min-width:600px) {
+    .desk_bac{
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+    }
+    .desk_bac img{
+        width: 100vw;
+    }
+}
